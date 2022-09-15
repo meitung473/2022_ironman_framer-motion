@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/2022_ironman_framer-motion/static/css/main.687c8763.css",
+    "main.js": "/2022_ironman_framer-motion/static/js/main.d10c97a6.js",
+    "static/css/535.632f1ac7.chunk.css": "/2022_ironman_framer-motion/static/css/535.632f1ac7.chunk.css",
+    "static/js/535.91b11ae8.chunk.js": "/2022_ironman_framer-motion/static/js/535.91b11ae8.chunk.js",
+    "static/js/787.ea71d698.chunk.js": "/2022_ironman_framer-motion/static/js/787.ea71d698.chunk.js",
+    "static/js/360.c8097302.chunk.js": "/2022_ironman_framer-motion/static/js/360.c8097302.chunk.js",
+    "index.html": "/2022_ironman_framer-motion/index.html",
+    "main.687c8763.css.map": "/2022_ironman_framer-motion/static/css/main.687c8763.css.map",
+    "main.d10c97a6.js.map": "/2022_ironman_framer-motion/static/js/main.d10c97a6.js.map",
+    "535.632f1ac7.chunk.css.map": "/2022_ironman_framer-motion/static/css/535.632f1ac7.chunk.css.map",
+    "535.91b11ae8.chunk.js.map": "/2022_ironman_framer-motion/static/js/535.91b11ae8.chunk.js.map",
+    "787.ea71d698.chunk.js.map": "/2022_ironman_framer-motion/static/js/787.ea71d698.chunk.js.map",
+    "360.c8097302.chunk.js.map": "/2022_ironman_framer-motion/static/js/360.c8097302.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.687c8763.css",
+    "static/js/main.d10c97a6.js"
+  ]
+}
