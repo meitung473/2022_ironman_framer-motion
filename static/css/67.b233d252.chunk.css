@@ -1,2 +1,2 @@
 .section{display:flex;width:100%}.section.v{flex-direction:column}.box.anim{-webkit-animation:move 1s ease normal forwards;animation:move 1s ease normal forwards}.box{background-color:#f88;height:50px;margin:10px;width:50px}.framer{background-color:#98fb98}@-webkit-keyframes move{0%{-webkit-transform:translateX(0);transform:translateX(0)}to{-webkit-transform:translateX(100px);transform:translateX(100px)}}@keyframes move{0%{-webkit-transform:translateX(0);transform:translateX(0)}to{-webkit-transform:translateX(100px);transform:translateX(100px)}}
-/*# sourceMappingURL=535.632f1ac7.chunk.css.map*/
+/*# sourceMappingURL=67.b233d252.chunk.css.map*/
