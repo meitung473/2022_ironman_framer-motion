@@ -1,9 +1,9 @@
-import { useState } from "react";
-import DailyTemplate from "./components/DailyTemplate";
+import { useState, Suspense } from "react";
+import DailyTemplate from "./utils/DailyTemplate";
 import Days from "./Days";
 
 function App() {
-    const [day, setDay] = useState(2);
+    const [day, setDay] = useState(3);
     return (
         <div className="App">
             <label htmlFor="days">鐵人賽第 {day} 天</label>
@@ -22,7 +22,9 @@ function App() {
                     );
                 })}
             </select>
-            <DailyTemplate day={day} />
+            <Suspense fallback={"loading..."}>
+                <DailyTemplate day={day} />
+            </Suspense>
         </div>
     );
 }

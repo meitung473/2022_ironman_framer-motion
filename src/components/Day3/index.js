@@ -1,38 +1,39 @@
 import "../../style.css";
 import InitialButton from "../../utils/InitialButton";
-import FramerMotionAnimation from "./FramerMotionAnimation";
-import NormalAnimation from "./NormalAnimation";
-import PPTAnimation from "./PPTAnimation";
-import SquareAnimation from "./SquareAnimation";
-import InitialFalse from "./InitialFalse";
-import TransitionTypes from "./TransitionTypes";
+import HoverStartNEnd from "./HoverStartNEnd";
+import WhileFocus from "./WhileFocus";
+import WhileHover from "./WhileHover";
+import WhileTap from "./WhileTap";
+import Tab2Content from "./TabExample/Tab2Content";
 
 const animations = [
     {
-        name: "CSS v.s motion",
-        component: [NormalAnimation, FramerMotionAnimation],
+        name: "whileHover: touch my heart",
+        component: WhileHover,
+        containerHeight: "180px",
     },
     {
-        name: "keyframes square",
-        component: SquareAnimation,
-        containerHeight: "300px",
+        name: "whileHover : onHoverStart & onHoverEnd",
+        component: HoverStartNEnd,
+        containerHeight: "450px",
     },
     {
-        name: "PPT 陽春動畫",
-        component: PPTAnimation,
+        name: "whileFocus",
+        component: WhileFocus,
         containerHeight: "250px",
     },
     {
-        name: "initial false",
-        component: InitialFalse,
+        name: "whileTap",
+        component: WhileTap,
+        containerHeight: "250px",
     },
     {
-        name: "transition types",
-        component: TransitionTypes,
-        containerHeight: "300px",
+        name: "Tab from W3school",
+        component: Tab2Content,
+        containerHeight: "400px",
     },
 ];
-export default function Day2() {
+export default function Day3() {
     return (
         <div className="Day">
             {animations.map((animation) => {

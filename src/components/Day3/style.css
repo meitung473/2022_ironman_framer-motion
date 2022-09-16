@@ -1,0 +1,86 @@
+
+.heart{
+    width: 50px;
+    height: 50px;
+   
+    background: red;
+    position: relative;
+ 
+}
+.heart:before, .heart:after{
+    content: ' ';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    text-transform: rotate(-45deg);
+}
+.heart:before{
+   top: -50%;
+}
+.heart::after{
+    left: -50%;
+ }
+
+.tab{
+
+    width: 240px;
+    display: flex;
+    text-align: center;
+}
+.poker{
+    display: inline-block;
+    flex: 1 ;
+    height: 98px;
+    border: 1px solid #aaa;
+    position: relative;
+    border-radius: 5px;
+   overflow: hidden;
+   background-size: contain;
+}
+.poker:nth-child(1){
+    background-image: url('./image/A.svg');
+}
+.poker:nth-child(2){
+    background-image: url('./image/B.svg');
+}
+.poker:nth-child(3){
+    background-image: url('./image/C.svg');
+    background-repeat: no-repeat;
+}
+
+.poker::after{
+    content: '';
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: #ffa;
+    position: absolute;
+    z-index: -1;
+}
+
+
+
+.link{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+}
+
+.tap{
+    width: 100px;
+    height: 100px;
+    background-color: hsl(180, 50%, 50%);
+    line-height: 100px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.tap::after{
+    content: '👍';
+}
