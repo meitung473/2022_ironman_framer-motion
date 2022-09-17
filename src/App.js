@@ -5,25 +5,23 @@ import Days from "./Days";
 function App() {
     const [day, setDay] = useState(3);
     return (
-        <div className="App">
+        <div>
             <label htmlFor="days">鐵人賽第 {day} 天</label>
             <select
                 id="days"
                 value={day}
-                onChange={(e) => {
-                    setDay(e.target.value);
-                }}
+                onChange={(e) => setDay(e.target.value)}
             >
-                {Array.from({ length: Object.keys(Days).length }, (_, i) => {
-                    return (
-                        <option key={i} value={i + 2}>
-                            Day {i + 2}
-                        </option>
-                    );
-                })}
+            {Object.keys(Days).map((_, i) => {
+                return (
+                    <option key={i} value={i + 2}>
+                        Day {i + 2}
+                    </option>
+                );
+            })}
             </select>
             <Suspense fallback={"loading..."}>
-                <DailyTemplate day={day} />
+                <DailyTemplate day={day} key={day} />
             </Suspense>
         </div>
     );

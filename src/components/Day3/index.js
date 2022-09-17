@@ -1,5 +1,3 @@
-import "../../style.css";
-import InitialButton from "../../utils/InitialButton";
 import HoverStartNEnd from "./HoverStartNEnd";
 import WhileFocus from "./WhileFocus";
 import WhileHover from "./WhileHover";
@@ -33,44 +31,5 @@ const animations = [
         containerHeight: "400px",
     },
 ];
-export default function Day3() {
-    return (
-        <div className="Day">
-            {animations.map((animation) => {
-                const { name, component } = animation;
-                if (Array.isArray(component)) {
-                    return (
-                        <div
-                            className="container"
-                            style={{
-                                height: animation ?? "auto",
-                            }}
-                        >
-                            <h3>{name}</h3>
-                            <InitialButton>
-                                {component.map((c, i) => {
-                                    const AnimationComponent = c;
-                                    return <AnimationComponent key={i} />;
-                                })}
-                            </InitialButton>
-                        </div>
-                    );
-                }
-                const AnimationComponent = component;
-                return (
-                    <div
-                        className="container"
-                        style={{
-                            height: animation?.containerHeight ?? "auto",
-                        }}
-                    >
-                        <h3>{name}</h3>
-                        <InitialButton>
-                            <AnimationComponent />
-                        </InitialButton>
-                    </div>
-                );
-            })}
-        </div>
-    );
-}
+
+export default animations;
