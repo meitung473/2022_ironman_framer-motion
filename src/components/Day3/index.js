@@ -18,7 +18,7 @@ const animations = [
     {
         name: "whileFocus",
         component: WhileFocus,
-        containerHeight: "250px",
+        containerHeight: "370px",
     },
     {
         name: "whileTap",

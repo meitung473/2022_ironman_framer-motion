@@ -1,3 +1,27 @@
+# 2022 鐵人賽 framer motion 範例與網頁展示
+Hi,我是 Rosa 在 2022 年第一次參加鐵人賽  
+主要學習 React library ─ framer motion   
+自 9/14 之後會每日更新 
+
+> 注意 : 內容並不會有詳細 React 基礎知識  
+
+
+## 下載與使用
+```bash
+git clone 
+```
+
+## 什麼是 framer motion ?
+
+
+
+## 鐵人賽規劃
+
+## 與前端技術的背景
+
+## log 紀錄
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

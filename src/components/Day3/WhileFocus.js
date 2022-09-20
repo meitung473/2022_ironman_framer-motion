@@ -76,6 +76,18 @@ export default function WhileFocus() {
                     }}
                 />
             </p>
+            <h3>搜尋輸入框</h3>
+            <motion.input
+                className="search"
+                type="search"
+                whileFocus={{
+                    width: 300,
+                    borderRadius: [null, "100px"],
+                    backgroundPosition: "calc(100% - 1em)",
+                    backgroundSize: "contain",
+                    outline: "none",
+                }}
+            />
         </>
     );
 }

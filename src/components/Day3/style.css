@@ -84,3 +84,22 @@
 .tap::after{
     content: '👍';
 }
+
+
+.search{
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    background-image: url('./image/search.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 1.6em;
+    text-indent: .5em;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .6);
+    border: none;
+    outline: none;
+    padding-right: 1em;
+}
