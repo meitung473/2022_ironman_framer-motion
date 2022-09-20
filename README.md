@@ -1,6 +1,6 @@
 ![banner](./images/banner.jpg)
 
-# 2022 鐵人賽 framer motion 範例與網頁展示
+## 2022 鐵人賽 framer motion 範例與網頁展示
 Hi,我是 Rosa 在 2022 年第一次參加鐵人賽自我挑戰組    
 主要學習 React library ─ framer motion   
 2022/9/14 之後會每日更新 😀  

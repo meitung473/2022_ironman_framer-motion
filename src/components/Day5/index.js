@@ -9,17 +9,17 @@ const animations = [
         component: CustomVariants,
     },
     {
+        name: "Variants Array string",
+        component: MultipleVariants,
+        containerHeight: "300px",
+    },
+    {
         name: "Variants 傳播",
         component: VariantsSpread,
     },
     {
         name: "浮動文字",
         component: NameFloating,
-    },
-    {
-        name: "多個 variants",
-        component: MultipleVariants,
-        containerHeight: "300px",
     },
 ];
 
