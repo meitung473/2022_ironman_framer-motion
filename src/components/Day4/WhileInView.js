@@ -42,6 +42,7 @@ export default function WhileInView() {
             <h3>滑動我</h3>
             {direction.map(({ initial, animate }, i) => (
                 <motion.div
+                    key={i}
                     className="inViewBox"
                     initial={{ ...initial, opacity: 0 }}
                     whileInView={{

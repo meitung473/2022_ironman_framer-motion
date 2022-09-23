@@ -6,7 +6,6 @@ const animations = [
     {
         name: "Pan",
         component: Pan,
-        containerHeight: "200px",
     },
     {
         name: "whileDrag : 各種拖曳",
@@ -14,7 +13,7 @@ const animations = [
         containerHeight: "600px",
     },
     {
-        name: "whileInView : 應用 #02 篇的 PPT 陽春動畫",
+        name: "whileInView",
         component: WhileInView,
         containerHeight: "450px",
     },

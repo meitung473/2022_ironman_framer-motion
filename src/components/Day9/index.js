@@ -6,12 +6,12 @@ const animations = [
     {
         name: "Bang 不見",
         component: [ComponentFadeOut, AnimatePresenceComponent],
-        containerHeight: "300px",
+        containerHeight: "500px",
     },
     {
         name: "旋轉木馬/燈箱",
         component: Carousel,
-        // containerHeight: "300px",
+        containerHeight: "400px",
     },
 ];
 
