@@ -1,5 +1,7 @@
 html,body{
     margin: 0;
+    font-family: 'League Spartan', sans-serif;
+    font-family: 'Noto Color Emoji', sans-serif;
 }
 
 #root{
@@ -16,3 +18,4 @@ html,body{
     border: 1px solid black;
     padding: 0 0 0 1em;
 }
+
