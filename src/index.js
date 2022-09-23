@@ -8,7 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename="/2022_ironman_framer-motion">
             <App />
         </BrowserRouter>
     </React.StrictMode>
