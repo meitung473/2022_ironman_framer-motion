@@ -1,0 +1,15 @@
+.outsider{
+    width: 100px;
+    height: 100px;
+    background: #fa0;
+    line-height: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.outsider[data-hidding="true"]{
+   opacity: 0;
+   transition: opacity 1s ease-out;
+
+}
+
