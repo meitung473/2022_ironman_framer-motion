@@ -4,14 +4,13 @@ html,body{
     font-family: 'Noto Color Emoji', sans-serif;
 }
 
-#root{
-    padding: 4rem 2rem;
+/* #root{
+    padding: 2em 2em;
     height: 100%;
-}
+} */
 
 .Day{
     width: 100%;
-   
 }
 
 .container{
