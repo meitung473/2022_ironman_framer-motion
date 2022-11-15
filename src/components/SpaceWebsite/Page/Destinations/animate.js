@@ -46,35 +46,30 @@ export const articleAnim = {
     },
     exit: {
         opacity: 0,
-        x: 50,
     },
 };
 export const lineAnim = {
-    hidden: {
-        scaleX: 0,
-    },
+    hidden: (firstLoad) => ({
+        scaleX: firstLoad ? 0 : 1,
+    }),
     show: {
         scaleX: 1,
         transition: {
             duration: 1,
         },
     },
-    exit: {
-        scaleX: 0,
-    },
 };
 // subContent
 export const subContentAnim = combineAnim(
     {},
     {
-        hidden: { x: 10, opacity: 0 },
+        hidden: (firstLoad) => ({
+            x: firstLoad ? 10 : 0,
+            opacity: firstLoad ? 0 : 1,
+        }),
         show: {
             x: 0,
             opacity: 1,
-        },
-        exit: {
-            x: -10,
-            opacity: 0,
         },
     }
 );

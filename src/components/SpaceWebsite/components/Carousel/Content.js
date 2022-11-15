@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
-import { br } from "../../../../../utils/Device";
-import { withContainer } from "../../../HOC";
+import { br } from "../../../../utils/Device";
+
+import useNowNestedPath from "./../../hooks/useNowNestedPath";
+import { contentWrapperAnim } from "./../../animation";
 
 const styles = {
     destinations: css`
@@ -40,6 +42,9 @@ const styles = {
             p {
                 text-align: left;
             }
+            p {
+                min-height: 10rem;
+            }
         }
     `,
     technology: css`
@@ -56,6 +61,9 @@ const styles = {
             p {
                 text-align: left;
             }
+            p {
+                min-height: 14rem;
+            }
         }
     `,
 };
@@ -67,6 +75,19 @@ const Wrapper = styled(motion.div)`
     ${({ $path }) => styles[$path]}
 `;
 
-const Content = withContainer(Wrapper);
+const Content = ({ children }) => {
+    const paths = useNowNestedPath();
+    return (
+        <Wrapper
+            $path={paths[0]}
+            variants={contentWrapperAnim}
+            exit="exit"
+            initial="hidden"
+            animate="show"
+        >
+            {children}
+        </Wrapper>
+    );
+};
 
 export default Content;

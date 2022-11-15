@@ -9,7 +9,10 @@ export function combineAnim(...args) {
             if (!newAnim[key]) {
                 newAnim[key] = anim[key];
             } else {
-                newAnim[key] = Object.assign(newAnim[key], anim[key]);
+                newAnim[key] = {
+                    ...newAnim[key],
+                    ...anim[key],
+                };
             }
         }
         return newAnim;

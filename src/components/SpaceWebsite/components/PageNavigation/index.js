@@ -9,10 +9,12 @@ import { AnimationLink } from "..";
 export default function PageNavigation({ index }) {
     const paths = useNowNestedPath();
 
-    // route with carousel order
-    const [order, setOrder] = useState(() =>
-        routes[index].child.indexOf(paths[paths.length - 1])
-    );
+    // route with correct carousel order
+    const [order, setOrder] = useState(() => {
+        // paths some value has space and it should be decode in plain text
+        const decodePath = decodeURI(paths[paths.length - 1]);
+        return routes[index].child.indexOf(decodePath);
+    });
 
     // if not match any carousel number,just return 0
     useEffect(() => {

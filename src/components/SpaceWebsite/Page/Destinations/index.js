@@ -1,25 +1,23 @@
 import { SubHeading, Info, Line } from "./style";
-import { lineAnim, wrapperAnim } from "./animate";
-import React from "react";
-import { MotionBox, MotionWrapper } from "../shared/components";
+import { Outlet } from "react-router-dom";
+import { MotionBox, MotionWrapper } from "../../components/Carousel";
 
 // this layout not moved when child route changes
-const Destinations = React.forwardRef(({ navigation, children }, ref) => {
+const Destinations = ({ navigation }) => {
     return (
-        <MotionWrapper ref={ref.current[0]}>
-            {/* image should be here */}
-            {children}
-            <MotionBox ref={ref.current[1]}>
+        <MotionWrapper>
+            <Outlet context="image" />
+            <MotionBox>
                 {navigation}
-                {/* content should be here */}
-                <Line variants={lineAnim} />
-                <Info variants={wrapperAnim} ref={ref.current[2]}>
+                <Outlet context="main" />
+                <Line />
+                <Info>
                     <SubHeading>AVG. DISTANCE</SubHeading>
                     <SubHeading>Est. travel time</SubHeading>
-                    {/* subContent should be here */}
+                    <Outlet context="subContent" />
                 </Info>
             </MotionBox>
         </MotionWrapper>
     );
-});
+};
 export default Destinations;

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
-import { br } from "../../../../../utils/Device";
-import { withOutletContainer } from "../../../HOC";
+import { br } from "../../../../utils/Device";
+import { withOutletContainer } from "../../HOC";
 
 const styles = {
     destinations: css`

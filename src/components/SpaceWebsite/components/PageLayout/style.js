@@ -9,9 +9,8 @@ const path2Style = {
         }
     `,
 };
-const Wrapper = styled(motion.section)`
+const Wrapper = styled(motion.main)`
     flex-grow: 1;
-
     h5 {
         text-align: center;
     }
@@ -28,7 +27,10 @@ const Wrapper = styled(motion.section)`
 `;
 const Title = styled(motion.h5)`
     ${br.md} {
-        margin-left: 4rem;
+        margin-left: 8rem;
+    }
+    ${br.xl} {
+        margin-left: 8rem;
     }
 `;
 const Number = styled.span`

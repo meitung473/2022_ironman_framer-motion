@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 import { br } from "../../utils/Device";
 import routes from "./routes";
@@ -21,7 +22,7 @@ const path2backgroundImage = (path) => {
     `;
 };
 
-const Container = styled.main`
+const Container = styled(motion.main)`
     margin: 0 auto;
     max-width: 1440px;
     min-width: 375px;
@@ -37,7 +38,7 @@ const Container = styled.main`
     flex-direction: column;
 
     background-color: ${({ theme }) => theme.colors.primary.Dark};
-    transition: background-image 0.3s ease-in-out;
+    transition: background-image 0.5s ease-in-out 1.4s;
     ${({ $imagePath }) => {
         let renderPath = null;
         if (!$imagePath) renderPath = "home";

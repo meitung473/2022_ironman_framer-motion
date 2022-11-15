@@ -78,6 +78,7 @@ const Indicator = styled(motion.span)`
     bottom: 0;
     right: 0;
     width: 4px;
+    transform-origin: left center;
     ${br.md} {
         top: unset;
         width: 100%;

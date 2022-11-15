@@ -8,7 +8,6 @@ const Wrapper = styled(motion.div)`
     align-items: center;
     flex: 1 0 0;
     padding: 0 24px;
-
     ${br.xl} {
         flex-direction: row;
     }

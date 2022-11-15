@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 import { br } from "../../../../../utils/Device";
-import { withContainer } from "../../../HOC";
-
 const styles = {
     destinations: css`
         aspect-ratio: 1 / 1;
@@ -12,7 +10,7 @@ const styles = {
         justify-self: center;
         order: -1;
         width: clamp(10.625rem, 4.463rem + 26.2911vw, 28.125rem);
-
+        border-radius: 50%;
         img {
             aspect-ratio: 1 / 1;
             max-height: 100%;
@@ -33,7 +31,7 @@ const styles = {
         align-self: end;
         box-shadow: 0 1px 0 0 hsla(231, 15%, 26%, 1);
         transform-origin: bottom center;
-        ${br.md} {
+        background-image: ${br.md} {
             grid-row: 2 / 2;
             box-shadow: unset;
         }
@@ -92,7 +90,7 @@ const styles = {
     `,
 };
 
-const Wrapper = styled(motion.figure)`
+export const Wrapper = styled(motion.figure)`
     ${({ $path }) => styles[$path]};
     image {
         vertical-align: bottom;
@@ -101,6 +99,3 @@ const Wrapper = styled(motion.figure)`
         object-fit: contain;
     }
 `;
-const Image = withContainer(Wrapper);
-
-export default Image;

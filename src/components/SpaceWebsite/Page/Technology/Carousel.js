@@ -1,45 +1,55 @@
 import { breakpointSizes } from "../../../../utils/Device";
-import { Content, Image } from "../shared";
 import importImage from "../../utils/importImage";
-import { useContext } from "react";
-import withCarouselOutlet, {
-    CarouselContext,
-} from "../../HOC/withCarouselOutlet";
-import routes from "../../routes";
+import {
+    CarouselLayout,
+    Content,
+    Image as ImageStyle,
+    useCarouselContext,
+} from "../../components/Carousel";
+import MotionText from "./../../components/AnimationText/index";
+import { useMemo } from "react";
 import { motion } from "framer-motion";
+import { defaultArticleAnim } from "../../animation";
 function Main() {
-    const { name, description } = useContext(CarouselContext);
+    const { type, content } = useCarouselContext();
+    if (type !== "main") return;
+    const { name, description } = content;
     return (
         <Content>
-            <h3>{name}</h3>
-            <p>{description}</p>
+            <MotionText textType="h3" words={name} splitText={" "} />
+            <motion.p variants={defaultArticleAnim}>{description}</motion.p>
         </Content>
     );
 }
-function TImage() {
-    const { name, images } = useContext(CarouselContext);
+
+function Image() {
+    const { type, content } = useCarouselContext();
+    const { images, name } = content;
+    const defaultSrc = useMemo(
+        () => require("../../assets/" + importImage(images.portrait)),
+        [images.portrait]
+    );
+    if (type !== "image") return;
+
     return (
-        <Image layout>
-            <picture>
-                <source
-                    srcSet={require("../../assets/" +
-                        importImage(images.landscape))}
-                    type="image/jpg"
-                    media={`(max-width:${breakpointSizes.xl}px)`}
-                />
-                <motion.img
-                    key={name}
-                    src={require("../../assets/" +
-                        importImage(images.portrait))}
-                    alt={name}
-                />
-            </picture>
-        </Image>
+        <ImageStyle name={name} defaultSrc={defaultSrc}>
+            <source
+                srcSet={require("../../assets/" +
+                    importImage(images.landscape))}
+                type="image/jpg"
+                media={`(max-width:${breakpointSizes.xl}px)`}
+            />
+        </ImageStyle>
     );
 }
 
-const Carousel = withCarouselOutlet(
-    { Main: Main, Image: TImage },
-    routes[2].path
-);
+function Carousel(props) {
+    return (
+        <CarouselLayout {...props}>
+            <Main />
+            <Image />
+        </CarouselLayout>
+    );
+}
+
 export default Carousel;

@@ -10,8 +10,9 @@ export default function useNowNestedPath() {
         const names = location.pathname
             .match(/^\/([^\\/]+)\/?(.*)$/)[2]
             .split("/");
+
         return names;
     }, [location.pathname]);
-   
+
     return paths;
 }

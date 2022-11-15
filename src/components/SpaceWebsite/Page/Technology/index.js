@@ -1,22 +1,17 @@
 import { SubTitle } from "./style";
-import React from "react";
-import MotionBox from "../shared/components/MotionBox";
-import { MotionWrapper } from "../shared/components";
 import { Outlet } from "react-router-dom";
+import { MotionBox, MotionWrapper } from "../../components/Carousel";
 
-const Technology = React.forwardRef(({ navigation, children }, ref) => {
+function Technology({ navigation }) {
     return (
-        <MotionWrapper ref={ref.current[0]}>
+        <MotionWrapper>
             {navigation}
-
-            {children}
-            <MotionBox ref={ref.current[1]}>
-                <SubTitle>THE TERMINOLOGY…</SubTitle>
-                <Outlet />
-                {/* <Outlet context="main" /> */}
+            <MotionBox>
+                <SubTitle layoutId="title">THE TERMINOLOGY…</SubTitle>
+                <Outlet context="main" />
             </MotionBox>
-            {/* <Outlet context="image" /> */}
+            <Outlet context="image" />
         </MotionWrapper>
     );
-});
+}
 export default Technology;

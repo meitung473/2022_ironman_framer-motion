@@ -2,7 +2,6 @@ export const navVariants = {
     show: {
         y: 0,
         x: 0,
-
         transition: {
             staggerChildren: 0.1,
             duration: 0.5,
@@ -35,5 +34,12 @@ export const itemsVariants = {
     exit: {
         y: 100,
         opacity: 0,
+    },
+};
+
+export const indicatorVariants = {
+    show: { opacity: 0 },
+    hover: {
+        opacity: 0.5,
     },
 };

@@ -1,4 +1,4 @@
-const wordVariants = {
+export const wordVariants = {
     hidden: {
         y: "100%",
         opacity: 0,
@@ -12,5 +12,3 @@ const wordVariants = {
         opacity: 0,
     },
 };
-
-export { wordVariants };
